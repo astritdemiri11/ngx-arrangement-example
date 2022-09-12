@@ -6,3 +6,24 @@
     <div #content>Content</div>
   </ng-template>
 </virtual-load>
+
+<div *serverSideRender="true" serverSide serverSideStyle="color: red">
+  This content will get a red color when the angular universal renders it at server
+</div>
+
+
+<div *ngIf="layoutService.business.isHandset(); else desktop">
+  Mobile version
+</div>
+
+<ng-template #desktop>
+  <div>Desktop version</div>
+</ng-template>
+
+<div *ngIf="layoutService.model.isBrowser; else server">
+  Browser version
+</div>
+
+<ng-template #server>
+  <div>Server version</div>
+</ng-template>

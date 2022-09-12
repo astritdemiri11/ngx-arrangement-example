@@ -1,4 +1,5 @@
 import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
+import { LayoutService } from 'ngx-arrangement';
 import { fromEvent } from 'rxjs';
 
 @Component({
@@ -9,7 +10,7 @@ import { fromEvent } from 'rxjs';
 export class AppComponent implements AfterViewInit {
   private alerted: boolean;
 
-  constructor() {
+  constructor(public layoutService: LayoutService) {
     this.alerted = false;
   }
 
