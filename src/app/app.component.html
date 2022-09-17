@@ -4,7 +4,7 @@
 
 <virtual-load>
   <ng-template loadContent>
-    <div #content class="content">Virtual load content</div>
+    <div #content class="content">Virtually loaded content</div>
   </ng-template>
 </virtual-load>
 
@@ -14,7 +14,7 @@
   This content will get a red color when the angular universal renders it at server
 </div>
 
-<h1>Example 3</h1>
+<h1>Example 3:</h1>
 
 <div *ngIf="layoutService.model.isBrowser; else server">
   Platform detected - Browser version
@@ -24,7 +24,7 @@
   <div>Platform detected - Server version</div>
 </ng-template>
 
-<h1>Example 4</h1>
+<h1>Example 4:</h1>
 
 <div *ngIf="layoutService.business.isHandset(); else desktop">
   Browser detected - Mobile version
