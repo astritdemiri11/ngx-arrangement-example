@@ -6,13 +6,16 @@
 
 .full-view::after {
   content: '\2193';
-  width: 100px;
-  height: 100px;
+  width: 300px;
+  height: 300px;
   text-align: center;
-  font-size: 100px;
+  vertical-align: -webkit-baseline-middle;
+  font-size: 300px;
   position: absolute;
-  top: calc(50% - 50px);
-  left: calc(50% - 50px);
+  top: calc(50% - 150px);
+  left: calc(50% - 150px);
+  background-color: #88f;
+  border: 1px dotted #44f;
 }
 
 .content {
