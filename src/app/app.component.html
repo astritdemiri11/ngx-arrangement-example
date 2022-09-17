@@ -1,29 +1,35 @@
+<h1>Example 1:</h1>
 <div class="full-view">Scroll to load content...</div>
 <div class="full-view">Keep scrolling to load content...</div>
 
 <virtual-load>
   <ng-template loadContent>
-    <div #content>Content</div>
+    <div #content class="content">Virtual load content</div>
   </ng-template>
 </virtual-load>
+
+<h1>Example 2:</h1>
 
 <div *serverSideRender="true" serverSide serverSideStyle="color: red">
   This content will get a red color when the angular universal renders it at server
 </div>
 
-
-<div *ngIf="layoutService.business.isHandset(); else desktop">
-  Mobile version
-</div>
-
-<ng-template #desktop>
-  <div>Desktop version</div>
-</ng-template>
+<h1>Example 3</h1>
 
 <div *ngIf="layoutService.model.isBrowser; else server">
-  Browser version
+  Platform detected - Browser version
 </div>
 
 <ng-template #server>
-  <div>Server version</div>
+  <div>Platform detected - Server version</div>
+</ng-template>
+
+<h1>Example 4</h1>
+
+<div *ngIf="layoutService.business.isHandset(); else desktop">
+  Browser detected - Mobile version
+</div>
+
+<ng-template #desktop>
+  <div>Browser detected - Desktop version</div>
 </ng-template>
